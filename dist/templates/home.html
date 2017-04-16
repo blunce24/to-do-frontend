@@ -1,1 +1,13 @@
-<h1>Home Page</h1>
+<h2>{{ home.currentUser }}</h2>
+
+<h3>Lists</h3>
+<div>
+    <table class="table">
+        <tr>
+            <th>Title</th>
+        </tr>
+        <tr ng-repeat="data in home.ApiRequests.lists.data | orderBy: '-$id' ">
+            <td>{{ data["title"] }}</td>
+        </tr>
+    </table>
+</div>
